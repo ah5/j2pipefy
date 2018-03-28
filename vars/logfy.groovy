@@ -1,5 +1,4 @@
 #!/usr/bin/env groovy
-import groovy.transform.Field
 
 /**
  * @description echoes info
