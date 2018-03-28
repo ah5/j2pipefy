@@ -6,6 +6,31 @@ buildscript {
 
 apply plugin: 'base'
 apply plugin: 'groovy'
+apply plugin: 'war'
 
 dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.12'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['src', 'vars']
+        }
+    }
+}
+
+groovydoc {
+    docTitle = description
+    source = sourceSets.main.groovy
+    destinationDir = new File('docs/web')
+    classpath = configurations.compile
+}
+
+war {
+    from 'docs/web'
+    webInf {
+        from 'docs/web/WEB-INF'
+    }
+    webXml = file('docs/web/WEB-INF/web.xml')
 }
