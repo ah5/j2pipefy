@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('j2pipefy') _
+@Library('j2pipefy@feature/develop') _
 
 pipeline {
     agent any
