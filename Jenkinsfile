@@ -7,7 +7,7 @@ pipeline {
         stage('Log') {
             steps {
                 script {
-                    logfy.info "this is a test message"
+                    logefy.info "this is a test message"
                 }
             }
         }
