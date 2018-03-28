@@ -5,7 +5,9 @@ pipeline {
     agent any
     stages {
         stage('Log') {
-            logfy.info "this is a test message"
+            script {
+                logfy.info "this is a test message"
+            }
         }
     }
 }
