@@ -1,0 +1,11 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'base'
+apply plugin: 'groovy'
+
+dependencies {
+}
