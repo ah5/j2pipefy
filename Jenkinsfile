@@ -4,10 +4,10 @@
 pipeline {
     agent any
     stages {
-        stage('Log') {
+        stage('Testing Vars') {
             steps {
                 script {
-                    logefy.info "this is a test message"
+                    logefy.info "this is a test info message"
                 }
             }
         }
