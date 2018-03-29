@@ -20,6 +20,7 @@ sourceSets {
 }
 
 groovydoc {
+    dependsOn compileGroovy
     docTitle = description
     source = sourceSets.main.groovy
     destinationDir = new File('docs/web')
@@ -27,9 +28,12 @@ groovydoc {
 }
 
 war {
+    dependsOn groovydoc
     from 'docs/web'
     webInf {
         from 'docs/web/WEB-INF'
     }
     webXml = file('docs/web/WEB-INF/web.xml')
 }
+
+build.dependsOn war
