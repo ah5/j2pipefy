@@ -19,6 +19,22 @@ sourceSets {
     }
 }
 
+clean.doFirst {
+    println "Removing build dir ..."
+    delete "${buildDir}"
+    println "Removing docs artifacts ..."
+    delete fileTree(rootDir) { 
+        include "docs/web/*.html"
+        include "docs/web/*.ico"
+        include "docs/web/*.gif"
+        include "docs/web/*.css"
+        include "docs/web/package-list"
+        include "docs/web/DefaultPackage/"
+    }
+}
+
+compileGroovy.dependsOn clean
+
 groovydoc {
     dependsOn compileGroovy
     docTitle = description
@@ -36,4 +52,4 @@ war {
     webXml = file('docs/web/WEB-INF/web.xml')
 }
 
-build.dependsOn war
+build.dependsOn clean, war
