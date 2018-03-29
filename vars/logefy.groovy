@@ -9,7 +9,7 @@
  */
 def info(message) {
     if(stringefy.isEmpty(message)) logefy.error "logefy.info: param message cannot be empty"
-    echo "INFO:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
+    echo "INFO:" + valuefy.SPACE + message.trim().capitalize()
 }
 
 /**
@@ -21,7 +21,7 @@ def info(message) {
  */
 def warning(message) {
     if(stringefy.isEmpty(message)) logefy.error "logefy.warning: param message cannot be empty"
-    echo "WARNING:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
+    echo "WARNING:" + valuefy.SPACE + message.trim().capitalize()
 }
 
 /**
@@ -33,7 +33,7 @@ def warning(message) {
  */
 def debug(message) {
     if(stringefy.isEmpty(message)) logefy.error "logefy.debug: param message cannot be empty"
-    echo "DEBUG:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
+    echo "DEBUG:" + valuefy.SPACE + message.trim().capitalize()
 }
 
 /**
@@ -58,7 +58,7 @@ def error(message) {
 def exception(ex) {
     if(ex==null) logefy.error "logefy.exception: param ex cannot be null"
     try {
-        echo "EXCEPTION:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(ex.getMessage())
+        echo "EXCEPTION:" + valuefy.SPACE + ex.getMessage().trim().capitalize()
     } catch(exception) {
         logefy.error "logefy.exception: exception getting message from exception object"
     }
