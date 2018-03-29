@@ -8,7 +8,7 @@
  * @param message the message to be displayed
  */
 def info(message) {
-    if(stringefy.isEmpty(message)) error "logefy.info: param message cannot be empty"
+    if(stringefy.isEmpty(message)) logefy.error "logefy.info: param message cannot be empty"
     echo "INFO:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
 }
 
@@ -20,7 +20,7 @@ def info(message) {
  * @param message the message to be displayed
  */
 def warning(message) {
-    if(stringefy.isEmpty(message)) error "logefy.warning: param message cannot be empty"
+    if(stringefy.isEmpty(message)) logefy.error "logefy.warning: param message cannot be empty"
     echo "WARNING:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
 }
 
@@ -32,22 +32,34 @@ def warning(message) {
  * @param message the message to be displayed
  */
 def debug(message) {
-    if(stringefy.isEmpty(message)) error "logefy.debug: param message cannot be empty"
+    if(stringefy.isEmpty(message)) logefy.error "logefy.debug: param message cannot be empty"
     echo "DEBUG:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(message)
 }
 
 /**
- * @description echoes exception
- * @syntax logefy.exception <message>
+ * @description errors out with message
+ * @syntax logefy.error <message>
+ * @usage logefy.error "error"
+ * 
+ * @param message the message to be displayed
+ */
+def error(message) {
+    if(stringefy.isEmpty(message)) error "logefy.error: param message cannot be empty"
+    error message.trim()
+}
+
+/**
+ * @description echoes exception message
+ * @syntax logefy.exception <exception>
  * @usage logefy.exception "exception"
  * 
  * @param ex the exception object
  */
 def exception(ex) {
-    if(ex==null) error "logefy.exception: param ex cannot be null"
+    if(ex==null) logefy.error "logefy.exception: param ex cannot be null"
     try {
         echo "EXCEPTION:" + valuefy.SPACE + stringefy.getDisplayFriendlyString(ex.getMessage())
     } catch(exception) {
-        error "logefy.exception: exception getting message from exception object"
+        logefy.error "logefy.exception: exception getting message from exception object"
     }
 }
