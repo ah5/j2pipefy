@@ -9,4 +9,3 @@ Welcome to the April 2018 Major Release of j2pipefy. There are a number of signi
 * **Pipeline Test** - Updated Jenkinsfile to support Jenkins UI Test Support  
 * **Gradle Support** - Gradle Support for Build, Docs was added  
 * **Release Notes** - Release Notes documentation was added  
-
