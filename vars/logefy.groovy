@@ -61,5 +61,7 @@ def exception(ex) {
         echo "EXCEPTION:" + valuefy.SPACE + ex.getMessage().trim().capitalize()
     } catch(exception) {
         logefy.error "logefy.exception: exception getting message from exception object"
+    } finally {
+        logefy.error "exception has occured, aborting abruptly"
     }
 }

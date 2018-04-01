@@ -3,7 +3,7 @@
 ###### **Update 1.0.0:** The update addresses these changes.
 ---
 
-Welcome to the March 2018 release of j2pipefy. There are a number of significant updates in this version that we hope you will like, some of the key highlights include:  
+Welcome to the March 2018 Major Release of j2pipefy. There are a number of significant updates in this version that we hope you will like, some of the key highlights include:  
 
 #### New Features  
 * **Change 1** - Description 1  
