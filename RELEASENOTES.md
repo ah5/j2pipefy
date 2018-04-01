@@ -1,5 +1,5 @@
-# 04/01/2018 (version 1.0.0)
 ---
+# 04/01/2018 (version 1.0.0)
 
 Welcome to the April 2018 Major Release of j2pipefy. There are a number of significant updates in this first version that we hope you will like. This update addresses the below changes.  
 
