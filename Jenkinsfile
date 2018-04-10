@@ -7,9 +7,9 @@ pipeline {
         stage('Testing Vars') {
             steps {
                 script {
-                    logefy.info "this is a info message"
-                    logefy.warning "this is a warning message"
-                    logefy.debug "this is a debug message"
+                    logefy.info "This is a info message"
+                    logefy.warning "This is a warning message"
+                    logefy.debug "This is a debug message"
                 }
             }
         }
