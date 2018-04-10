@@ -16,7 +16,7 @@ def jenkinsCredentialsId(credential) {
             valid = true
         }
     } catch (CredentialNotFoundException ex) {
-        logefy.debug "validating jenkins credentialsId failed" 
+        logefy.debug "Validating jenkins credentialsId failed." 
         logefy.exception(ex)
     }
     return valid

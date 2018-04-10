@@ -8,8 +8,8 @@
  * @param message the message to be displayed
  */
 def info(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.info: param message cannot be empty"
-    echo "INFO: " + message.trim().capitalize()
+    if(stringefy.isEmpty(message)) logefy.error "logefy.info: Param message cannot be empty."
+    echo "INFO: " + message.trim()
 }
 
 /**
@@ -20,8 +20,8 @@ def info(message) {
  * @param message the message to be displayed
  */
 def warning(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.warning: param message cannot be empty"
-    echo "WARNING: " + message.trim().capitalize()
+    if(stringefy.isEmpty(message)) logefy.error "logefy.warning: Param message cannot be empty."
+    echo "WARNING: " + message.trim()
 }
 
 /**
@@ -32,8 +32,8 @@ def warning(message) {
  * @param message the message to be displayed
  */
 def debug(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.debug: param message cannot be empty"
-    echo "DEBUG: " + message.trim().capitalize()
+    if(stringefy.isEmpty(message)) logefy.error "logefy.debug: Param message cannot be empty."
+    echo "DEBUG: " + message.trim()
 }
 
 /**
@@ -44,7 +44,7 @@ def debug(message) {
  * @param message the message to be displayed
  */
 def error(message) {
-    if(stringefy.isEmpty(message)) error "logefy.error: param message cannot be empty"
+    if(stringefy.isEmpty(message)) error "logefy.error: Param message cannot be empty."
     error message.trim()
 }
 
@@ -56,12 +56,12 @@ def error(message) {
  * @param ex the exception object
  */
 def exception(ex) {
-    if(ex==null) logefy.error "logefy.exception: param ex cannot be null"
+    if(ex==null) logefy.error "logefy.exception: Param ex cannot be null."
     try {
         echo "EXCEPTION: " + ex.getMessage().trim().capitalize()
     } catch(exception) {
-        logefy.error "logefy.exception: exception getting message from exception object"
+        logefy.error "logefy.exception: Exception getting message from exception object."
     } finally {
-        logefy.error "exception has occured, aborting abruptly"
+        logefy.error "Exception has occured, aborting abruptly."
     }
 }
