@@ -15,6 +15,13 @@ pipeline {
                     logefy.info "This is a info message"
                     logefy.warning "This is a warning message"
                     logefy.debug "This is a debug message"
+                }
+            }
+        }
+
+        stage('Testing Tool Commands') {
+            steps {
+                script {
                     ansibleTool.version()
                 }
             }
