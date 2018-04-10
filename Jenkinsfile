@@ -3,8 +3,8 @@
 import groovy.transform.Field
 import com.ah5.j2pipefy.tool.*
 
-@Field def Ansible ansibleTool = new Ansible()
-@Field def Docker dockerTool = new Docker()
+@Field def ansibleTool = new Ansible()
+@Field def dockerTool = new Docker()
 
 pipeline {
     agent any
