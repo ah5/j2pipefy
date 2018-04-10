@@ -15,7 +15,7 @@ pipeline {
                     logefy.info "This is a info message"
                     logefy.warning "This is a warning message"
                     logefy.debug "This is a debug message"
-                    ansibleTool.version
+                    ansibleTool.version()
                 }
             }
         }
