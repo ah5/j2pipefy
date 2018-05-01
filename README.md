@@ -1,4 +1,4 @@
-# j2pipefy - Pipe your app using Jenkins 2+ !
+# j2pipefy - Pipe your workflow using Jenkins 2+ !
 
 | Branch            | Version   | Build Status      |
 | :------------     | :-----:   | -------------:    |
