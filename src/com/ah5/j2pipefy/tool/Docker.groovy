@@ -23,7 +23,7 @@ def run(commandStr) {
     try {
         sh "${valuefy.DOCKER_COMMAND} ${commandStr}"
     } catch (ex) {
-        logefy.debug "${LOGGER}:run: Running docker command failed !"
+        logefy.debug "${LOGGER}:run: Running ${valuefy.DOCKER_COMMAND} command failed !"
         logefy.exception(ex)
     }
 }

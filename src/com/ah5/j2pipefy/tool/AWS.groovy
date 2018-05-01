@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 package com.ah5.j2pipefy.tool
 
-@Field def LOGGER = "com.ah5.j2pipefy.tool.Kubernetes"
+@Field def LOGGER = "com.ah5.j2pipefy.tool.AWS"
 
 /**
  * @description runs version command
@@ -20,9 +20,9 @@ def run(commandStr) {
     logefy.info "${LOGGER}:run: Running command ..."
     if(stringefy.isEmpty(commandStr)) logefy.error "${LOGGER}:run: Param commandStr cannot be empty."
     try {
-        sh "${valuefy.KUBERNETES_COMMAND} ${commandStr}"
+        sh "${valuefy.AWS_COMMAND} ${commandStr}"
     } catch (ex) {
-        logefy.debug "${LOGGER}:run: Running ${valuefy.KUBERNETES_COMMAND} command failed !"
+        logefy.debug "${LOGGER}:run: Running ${valuefy.AWS_COMMAND} command failed !"
         logefy.exception(ex)
     }
 }

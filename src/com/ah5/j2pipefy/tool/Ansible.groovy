@@ -23,7 +23,7 @@ def run(commandStr) {
     try {
         sh "${valuefy.ANSIBLE_COMMAND} ${commandStr}"
     } catch (ex) {
-        logefy.debug "${LOGGER}:run: Running ansible command failed !"
+        logefy.debug "${LOGGER}:run: Running ${valuefy.ANSIBLE_COMMAND} command failed !"
         logefy.exception(ex)
     }
 }
