@@ -1,14 +1,15 @@
+# Gradle config
 .gradle
-/build/
-
-# Ignore Gradle GUI config
 gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
-
-# Cache of project
 .gradletasknamecache
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+# Gradle artifacts
+/build/
+docs/web/*.html
+docs/web/*.ico
+docs/web/*.gif
+docs/web/*.css
+docs/web/package-list
+docs/web/DefaultPackage/*
+
