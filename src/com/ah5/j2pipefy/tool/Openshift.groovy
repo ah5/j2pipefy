@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 package com.ah5.j2pipefy.tool
+import groovy.transform.Field
 
 @Field def LOGGER = "com.ah5.j2pipefy.tool.Openshift"
 
