@@ -1,9 +1,9 @@
 # j2pipefy - Pipe your workflow using Jenkins 2+ !
 
-| Branch            | Version   | Builds            | Code Coverage |
-| :------------     | :-----:   | -------------:    | -------------:  |
-| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) | [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=master)](https://coveralls.io/github/ah5/j2pipefy) |
-| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) | [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=feature/develop)](https://coveralls.io/github/ah5/j2pipefy) |
+| Branch            | Version   | Continuous Integration |
+| :------------     | :-----:   | -------------:    |
+| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=master)](https://coveralls.io/github/ah5/j2pipefy) |
+| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=feature/develop)](https://coveralls.io/github/ah5/j2pipefy) |
 
 # Release Notes
 
