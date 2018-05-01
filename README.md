@@ -7,7 +7,7 @@
 
 # Release Notes
 
-### 05/01/2018 `v1.0.0`
+### 05/01/2018 `1.0.0`
 Welcome to the April 2018 Major Release of j2pipefy. There are a number of significant updates in this first version that we hope you will like. This update addresses the below changes.  
 ##### Major Updates  
 * **Basic Vars** - Added vars to support jenkins logging/string/validation  
