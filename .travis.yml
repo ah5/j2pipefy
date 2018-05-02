@@ -11,7 +11,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-script:
+after_script:
   - bin/coveralls -v
 
 after_sucess:
