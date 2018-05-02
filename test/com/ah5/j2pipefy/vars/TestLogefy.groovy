@@ -66,7 +66,6 @@ class TestLogefy extends BasePipefyTest {
             throw ex
         } finally {
             printCallStack()
-            Assert.fail("Exception expected")
         }
     }
 
