@@ -1,17 +1,26 @@
-apply plugin: 'base'
-apply plugin: 'groovy'
-apply plugin: 'java'
-apply plugin: 'war'
+plugins {
+    id 'base'
+    id 'groovy'
+    id 'java'
+    id 'war'
+    id 'jacoco'
+}
 
 repositories {
     mavenCentral()
     jcenter()
     maven { url 'http://repo.jenkins-ci.org/releases/' }
+    maven { url 'https://jitpack.io' }
 }
 
+configurations { codacy }
+
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.15'
-    compile 'org.jenkins-ci.plugins:credentials-binding:1.16'
+    compile     group: 'org.codehaus.groovy',       name: 'groovy-all',             version: '2.4.15'
+    compile     group: 'org.jenkins-ci.plugins',    name: 'credentials-binding',    version: '1.16'
+    testCompile group: 'com.lesfurets',             name: 'jenkins-pipeline-unit',  version: '1.0'    
+    testCompile group: 'junit',                     name: 'junit',                  version: '4.11'
+    codacy      group: 'com.github.codacy',         name: 'codacy-coverage-reporter', version: '2.0.1'
 }
 
 sourceSets {
@@ -19,6 +28,14 @@ sourceSets {
         groovy {
             srcDirs = ['src', 'vars']
             exclude '**/validefy.groovy'
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ['test']
+        }
+        resources {
+            srcDirs = ['test/resources']
         }
     }
 }
@@ -38,6 +55,8 @@ clean.doFirst {
 }
 
 compileGroovy.dependsOn clean
+compileGroovy.options.compilerArgs += ['-proc:none']
+compileTestGroovy.options.compilerArgs += ['-proc:none']
 
 groovydoc {
     dependsOn compileGroovy
@@ -57,3 +76,24 @@ war {
 }
 
 build.dependsOn clean, war
+
+jacocoTestReport {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+    sourceSets sourceSets.test
+    reports {
+        xml.enabled true
+        csv.enabled false
+        xml.destination file("${buildDir}/reports/jacoco/report.xml")
+        html.enabled true
+    }
+}
+
+task codacyCoverageUpload(type: JavaExec, dependsOn: jacocoTestReport) {
+    classpath = configurations.codacy
+    main 'com.codacy.CodacyCoverageReporter'
+    args = [
+        '-l', 'Java', 
+        '-r', tasks.jacocoTestReport.reports.xml.destination,
+        '--projectToken', '2e3e7e02b3d249998caebe9398c80daf'
+    ]
+}

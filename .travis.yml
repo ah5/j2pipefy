@@ -1,5 +1,8 @@
 language: groovy
 
+jdk:
+  - oraclejdk8
+
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
@@ -7,3 +10,13 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
+script:
+  - ./gradlew clean assemble check
+  - ./gradlew test codacyCoverageUpload
+
+after_failure:
+  - ./gradlew clean check --debug
+
+# as per http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/
+sudo: false

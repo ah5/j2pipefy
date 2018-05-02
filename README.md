@@ -1,9 +1,9 @@
 # j2pipefy - Pipe your workflow using Jenkins 2+ !
 
-| Branch            | Version   | Builds            | Code Coverage |
-| :------------     | :-----:   | -------------:    | -------------:  |
-| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) | [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=master)](https://coveralls.io/github/ah5/j2pipefy) |
-| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) | [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=feature/develop)](https://coveralls.io/github/ah5/j2pipefy) |
+| Branch            | Version   | Continuous Integration |
+| :------------     | :-----:   | -------------:    |
+| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/48e7db2939074833ab02bafcf9830bfd?branch=master)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=master)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
+| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/48e7db2939074833ab02bafcf9830bfd?branch=feature/develop)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=feature/develop)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
 
 # Release Notes
 
@@ -15,5 +15,5 @@ Welcome to the April 2018 Major Release of j2pipefy. There are a number of signi
 * **Pipeline Test** - Updated Jenkinsfile to support Jenkins UI Test Support using Jacoco  
 * **Gradle Support** - Gradle Support for Build, Docs was added  
 * **Release Notes** - Release Notes documentation was added  
-* **Travis CI** - Added support for Travis CI  
+* **CI Support** - Added support for Travis CI, Codacy integrations  
 * **Tool Support** - Added Ansible, Docker Tools  
