@@ -15,10 +15,11 @@ script:
   - ./gradlew clean assemble check
 
 after_sucess:
+  - ./gradlew jacocoTestReport
   - ./gradlew codacyUpload
 
 after_failure:
   - ./gradlew clean check --debug
 
 # as per http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/
-sudo: false
+# sudo: false
