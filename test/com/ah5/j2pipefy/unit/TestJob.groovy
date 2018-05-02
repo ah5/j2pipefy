@@ -6,8 +6,6 @@ import com.lesfurets.jenkins.unit.BasePipelineTest
 
 class TestJob extends BasePipelineTest {
 
-    def script
-
     @Override
     @Before
     void setUp() throws Exception {
@@ -15,18 +13,25 @@ class TestJob extends BasePipelineTest {
         super.setUp()
     }
 
+    void runScript(scriptRef) throws Exception {
+        try {
+            def script = loadScript(scriptRef)
+            script.execute()
+        } catch (ex) {
+            throw ex
+        } finally {
+            printCallStack()
+        }
+    }
+
     @Test
     void testEchoNode() throws Exception {
-        script = loadScript("workflows/echoNode.jenkins")
-        script.execute()
-        printCallStack()
+        runScript("workflows/echoNode.jenkins")
     }
 
     @Test
     void testEchoPipeline() throws Exception {
-        script = loadScript("workflows/echoPipeline.jenkins")
-        script.execute()
-        printCallStack()
+        runScript("workflows/echoPipeline.jenkins")
     }
 
 }
