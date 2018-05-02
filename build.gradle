@@ -57,6 +57,12 @@ compileGroovy.dependsOn clean
 compileGroovy.options.compilerArgs += ['-proc:none']
 compileTestGroovy.options.compilerArgs += ['-proc:none']
 
+test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardError"
+    }
+}
+
 groovydoc {
     dependsOn compileGroovy
     docTitle = description
