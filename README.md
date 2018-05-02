@@ -2,8 +2,8 @@
 
 | Branch            | Version   | Continuous Integration |
 | :------------     | :-----:   | -------------:    |
-| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=master&service=github)](https://coveralls.io/github/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=master)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
-| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) [![Coverage Status](https://coveralls.io/repos/github/ah5/j2pipefy/badge.svg?branch=feature/develop&service=github)](https://coveralls.io/github/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=feature/develop)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
+| `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=master)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
+| `feature/develop` | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=feature/develop)](https://travis-ci.org/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=feature/develop)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
 
 # Release Notes
 
