@@ -15,5 +15,5 @@ Welcome to the April 2018 Major Release of j2pipefy. There are a number of signi
 * **Pipeline Test** - Updated Jenkinsfile to support Jenkins UI Test Support using Jacoco  
 * **Gradle Support** - Gradle Support for Build, Docs was added  
 * **Release Notes** - Release Notes documentation was added  
-* **Travis CI** - Added support for Travis CI  
+* **CI Support** - Added support for Travis CI, Codacy integrations  
 * **Tool Support** - Added Ansible, Docker Tools  
