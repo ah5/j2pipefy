@@ -5,20 +5,11 @@ import com.lesfurets.jenkins.unit.BasePipelineTest
 
 class TestJob extends BasePipelineTest {
 
-/*
-    private HelloWorld subject;
-
-    @Before
-	public void setup() {
-		subject = new HelloWorld();
-	}
-*/
     @Test
-    void should_execute_without_errors() throws Exception {
-        //def script = loadScript("workflows/exampleJob.jenkins")
-        //script.execute()
+    void testLogefy() throws Exception {
+        def script = loadScript("workflows/logefyJob.jenkins")
+        script.execute()
         //printCallStack()
-        println "placeholder for the test should_execute_without_errors .."
     }
 
 }
