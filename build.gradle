@@ -45,6 +45,7 @@ clean.doFirst {
 }
 
 compileGroovy.dependsOn clean
+compileGroovy.options.compilerArgs += ['-proc:none']
 
 groovydoc {
     dependsOn compileGroovy
