@@ -64,3 +64,5 @@ war {
 }
 
 build.dependsOn clean, war
+
+cobertura.coverageFormats = ['html', 'xml']
