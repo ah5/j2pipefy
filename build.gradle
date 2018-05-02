@@ -1,7 +1,6 @@
 plugins {
     id 'base'
     id 'groovy'
-    id 'java'
     id 'war'
     id 'jacoco'
 }
