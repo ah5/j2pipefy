@@ -66,3 +66,4 @@ war {
 build.dependsOn clean, war
 
 cobertura.coverageFormats = ['html', 'xml']
+cobertura.coverageSourceDirs = sourceSets.main.groovy.srcDirs
