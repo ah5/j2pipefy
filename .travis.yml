@@ -15,4 +15,4 @@ script:
   - bin/coveralls -v
 
 after_sucess:
-  - bin/coveralls -v
+  - echo $TRAVIS_TEST_RESULT
