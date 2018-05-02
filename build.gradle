@@ -11,9 +11,15 @@ repositories {
     mavenCentral()
     jcenter()
     maven { url 'http://repo.jenkins-ci.org/releases/' }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
+    //compile group: 'com.codacy', name: 'codacy-coverage-reporter', version: '4.0.0'
+    //codacy 'com.codacy:codacy-coverage-reporter:2.0.0'
+    //codacy 'com.codacy:codacy-coverage-reporter:4.0.0'
+    codacy group: 'com.github.codacy', name: 'codacy-coverage-reporter', version: '2.0.1'
+
     compile     group: 'org.codehaus.groovy',       name: 'groovy-all',             version: '2.4.15'
     compile     group: 'org.jenkins-ci.plugins',    name: 'credentials-binding',    version: '1.16'
     testCompile group: 'com.lesfurets',             name: 'jenkins-pipeline-unit',  version: '1.0'    
@@ -30,6 +36,9 @@ sourceSets {
     test {
         groovy {
             srcDirs = ['test']
+        }
+        resources {
+            srcDirs = ['test/resources']
         }
     }
 }
@@ -76,14 +85,33 @@ jacocoTestReport {
     sourceSets sourceSets.test
     reports {
         xml.enabled true
-        //xml.destination "${buildDir}/reports/jacoco/report.xml"
+        csv.enabled false
         xml.destination file("${buildDir}/reports/jacoco/report.xml")
         html.enabled true
     }
 }
 
+configurations { codacy }
+
+/* 
 codacy {
-    toolVersion = '1.6' // override the version for com.codacy:codacy-coverage-reporter
+    toolVersion = '4.0.0' // override the version for com.codacy:codacy-coverage-reporter
     commitUuid = '${TRAVIS_COMMIT}'
     projectToken = '2e3e7e02b3d249998caebe9398c80daf'
+}*/
+
+task codacyCoverageUpload(type: JavaExec) {
+    classpath = configurations.codacy
+    main 'com.codacy.CodacyCoverageReporter'
+    args = [
+        '-l', 'Java', 
+        '-r', tasks.jacocoTestReport.reports.xml.destination,
+        '--projectToken', '2e3e7e02b3d249998caebe9398c80daf'
+    ]
+    /* 
+    args = [
+            '--language', 'Java',
+            '--coverageReport', tasks.jacocoTestReport.reports.xml.destination,
+            '--projectToken', '2e3e7e02b3d249998caebe9398c80daf'
+    ]*/
 }

@@ -13,13 +13,10 @@ cache:
 
 script:
   - ./gradlew clean assemble check
-  - ./gradlew test jacocoTestReport
-
-after_sucess:
-  - ./gradlew codacyUpload
+  - ./gradlew test jacocoTestReport codacyUpload
 
 after_failure:
   - ./gradlew clean check --debug
 
 # as per http://blog.travis-ci.com/2014-12-17-faster-builds-with-container-based-infrastructure/
-# sudo: false
+sudo: false
