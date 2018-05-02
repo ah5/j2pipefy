@@ -50,6 +50,7 @@ clean.doFirst {
 
 compileGroovy.dependsOn clean
 compileGroovy.options.compilerArgs += ['-proc:none']
+compileTestGroovy.options.compilerArgs += ['-proc:none']
 
 groovydoc {
     dependsOn compileGroovy
@@ -75,7 +76,8 @@ jacocoTestReport {
     sourceSets sourceSets.test
     reports {
         xml.enabled true
-        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        //xml.destination "${buildDir}/reports/jacoco/report.xml"
+        xml.destination file("${buildDir}/reports/jacoco/report.xml")
         html.enabled true
     }
 }
