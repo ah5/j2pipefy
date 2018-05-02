@@ -1,4 +1,4 @@
-language: java
+language: groovy
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -11,6 +11,8 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+script:
+  - bin/coveralls -v
+
 after_sucess:
   - bin/coveralls -v
-  - bash <(curl -s https://codecov.io/bash)
