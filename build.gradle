@@ -23,8 +23,13 @@ dependencies {
 sourceSets {
     main {
         groovy {
-            srcDirs = ['src', 'vars', 'test']
+            srcDirs = ['src', 'vars']
             exclude '**/validefy.groovy'
+        }
+    }
+    test {
+        groovy {
+            srcDirs = ['test']
         }
     }
 }
@@ -67,7 +72,7 @@ build.dependsOn clean, war
 
 jacocoTestReport {
     executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-    sourceSets it.sourceSets.main
+    sourceSets sourceSets.test
     reports {
         xml.enabled true
         xml.destination "${buildDir}/reports/jacoco/report.xml"
