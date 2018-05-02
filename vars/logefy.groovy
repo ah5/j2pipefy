@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+import java.lang.Exception
 
 /**
  * @description echoes info
@@ -8,7 +9,7 @@
  * @param message the message to be displayed
  */
 def info(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.info: Param message cannot be empty."
+    if(!message?.trim()) logefy.error "logefy.info: Param message cannot be empty."
     echo "INFO: " + message.trim()
 }
 
@@ -20,7 +21,7 @@ def info(message) {
  * @param message the message to be displayed
  */
 def warning(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.warning: Param message cannot be empty."
+    if(!message?.trim()) logefy.error "logefy.warning: Param message cannot be empty."
     echo "WARNING: " + message.trim()
 }
 
@@ -32,7 +33,7 @@ def warning(message) {
  * @param message the message to be displayed
  */
 def debug(message) {
-    if(stringefy.isEmpty(message)) logefy.error "logefy.debug: Param message cannot be empty."
+    if(!message?.trim()) logefy.error "logefy.debug: Param message cannot be empty."
     echo "DEBUG: " + message.trim()
 }
 
@@ -44,7 +45,7 @@ def debug(message) {
  * @param message the message to be displayed
  */
 def error(message) {
-    if(stringefy.isEmpty(message)) error "logefy.error: Param message cannot be empty."
+    if(!message?.trim()) error "logefy.error: Param message cannot be empty."
     error message.trim()
 }
 
@@ -57,6 +58,9 @@ def error(message) {
  */
 def exception(ex) {
     if(ex==null) logefy.error "logefy.exception: Param ex cannot be null."
+    else if(!(ex instanceof Exception)) {
+        logefy.error "logefy.exception: Param has to be an exception object."
+    }
     try {
         echo "EXCEPTION: " + ex.getMessage().trim().capitalize()
     } catch(exception) {
@@ -65,3 +69,5 @@ def exception(ex) {
         logefy.error "Exception has occured, aborting abruptly."
     }
 }
+
+return this
