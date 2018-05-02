@@ -18,13 +18,12 @@ dependencies {
     compile     group: 'org.jenkins-ci.plugins',    name: 'credentials-binding',    version: '1.16'
     testCompile group: 'com.lesfurets',             name: 'jenkins-pipeline-unit',  version: '1.0'    
     testCompile group: 'junit',                     name: 'junit',                  version: '4.11'
-    //classpath   group: 'gradle.plugin.io.github.ddimtirov', name: 'codacy-gradle-plugin', version: '0.1.0'
 }
 
 sourceSets {
     main {
         groovy {
-            srcDirs = ['src', 'vars']
+            srcDirs = ['src', 'vars', 'test']
             exclude '**/validefy.groovy'
         }
     }
@@ -67,9 +66,12 @@ war {
 build.dependsOn clean, war
 
 jacocoTestReport {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+    sourceSets it.sourceSets.main
     reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
+        xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        html.enabled true
     }
 }
 

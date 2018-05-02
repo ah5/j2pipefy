@@ -13,9 +13,9 @@ cache:
 
 script:
   - ./gradlew clean assemble check
+  - ./gradlew jacocoTestReport
 
 after_sucess:
-  - ./gradlew jacocoTestReport
   - ./gradlew codacyUpload
 
 after_failure:
