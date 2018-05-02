@@ -37,7 +37,8 @@ def error() {
 
 def exception() {
     node() {
-        getScript().exception 'message'
+        println "TBD: To be tested."
+        //getScript().exception 'message'
     }
 }
 
