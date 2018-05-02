@@ -1,0 +1,17 @@
+#!/usr/bin/env groovy
+
+def execute() {
+   node() {
+       def utils = load "vars/logefy.groovy"
+       stage('Checkout') {
+           checkout scm
+       }
+       gitlabBuilds(builds: ["info"]) {
+           stage("info") {
+               utils.info("message")
+           }
+       }
+   }
+}
+
+return this
