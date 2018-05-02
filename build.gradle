@@ -4,6 +4,7 @@ plugins {
     id 'java'
     id 'war'
     id 'jacoco'
+    id 'io.github.ddimtirov.codacy' version '0.1.0'
     id 'net.saliman.cobertura' version '2.3.1'
     id 'com.github.kt3k.coveralls' version '2.8.2'
 }
@@ -19,6 +20,7 @@ dependencies {
     compile     group: 'org.jenkins-ci.plugins',    name: 'credentials-binding',    version: '1.16'
     testCompile group: 'com.lesfurets',             name: 'jenkins-pipeline-unit',  version: '1.0'    
     testCompile group: 'junit',                     name: 'junit',                  version: '4.11'
+    classpath   group: 'gradle.plugin.io.github.ddimtirov', name: 'codacy-gradle-plugin', version: '0.1.0'
 }
 
 sourceSets {
@@ -74,3 +76,9 @@ jacocoTestReport {
 
 cobertura.coverageFormats = ['html', 'xml']
 cobertura.coverageSourceDirs = sourceSets.main.groovy.srcDirs
+
+codacy {
+    toolVersion = '1.6' // override the version for com.codacy:codacy-coverage-reporter
+    commitUuid = '${TRAVIS_COMMIT}'
+    projectToken = '2e3e7e02b3d249998caebe9398c80daf'
+}

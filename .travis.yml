@@ -15,7 +15,7 @@ script:
   - ./gradlew clean assemble check
 
 after_sucess:
-  - ./gradlew coveralls
+  - ./gradlew codacyUpload
 
 after_failure:
   - ./gradlew clean check --debug
