@@ -12,4 +12,5 @@ cache:
     - $HOME/.gradle/wrapper/
 
 after_sucess:
+  echo -e "Step - After Success"
   coveralls
