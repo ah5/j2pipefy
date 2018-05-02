@@ -13,7 +13,7 @@ cache:
 
 script:
   - ./gradlew clean assemble check
-  - ./gradlew jacocoTestReport
+  - ./gradlew test jacocoTestReport
 
 after_sucess:
   - ./gradlew codacyUpload
