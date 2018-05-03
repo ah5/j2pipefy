@@ -13,7 +13,7 @@ cache:
 
 script:
   - ./gradlew clean assemble check
-  - ./gradlew test codacyCoverageUpload
+  - ./gradlew codacyCoverageUpload
 
 after_failure:
   - ./gradlew clean check --debug
