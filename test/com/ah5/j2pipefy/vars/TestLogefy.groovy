@@ -21,7 +21,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.info("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -34,7 +34,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.warning("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -47,7 +47,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.debug("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -60,7 +60,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.error("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -73,7 +73,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.exception("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
