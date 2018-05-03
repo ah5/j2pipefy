@@ -14,10 +14,12 @@ class TestLogefy extends BasePipefyTest {
         init("workflows/vars.logefy.jenkins")
     }
 
+    //info ------------------------------------------
+
     @Test
-    void testInfo() throws Exception {
+    void testInfoByStringValue() throws Exception {
         try {
-            script.info()
+            script.info("message")
         } catch (ex) {
             throw ex
         } finally {
@@ -25,10 +27,12 @@ class TestLogefy extends BasePipefyTest {
         }
     }
 
+    //warning ------------------------------------------
+
     @Test
-    void testWarning() throws Exception {
+    void testWarningByStringValue() throws Exception {
         try {
-            script.warning()
+            script.warning("message")
         } catch (ex) {
             throw ex
         } finally {
@@ -36,10 +40,12 @@ class TestLogefy extends BasePipefyTest {
         }
     }
 
+    //debug ------------------------------------------
+
     @Test
-    void testDebug() throws Exception {
+    void testDebugByStringValue() throws Exception {
         try {
-            script.debug()
+            script.debug("message")
         } catch (ex) {
             throw ex
         } finally {
@@ -47,10 +53,12 @@ class TestLogefy extends BasePipefyTest {
         }
     }
 
+    //error ------------------------------------------
+
     @Test
-    void testError() throws Exception {
+    void testErrorByStringValue() throws Exception {
         try {
-            script.error()
+            script.error("message")
         } catch (ex) {
             throw ex
         } finally {
@@ -58,10 +66,12 @@ class TestLogefy extends BasePipefyTest {
         }
     }
 
+    //exception ------------------------------------------
+
     @Test
-    void testException() throws Exception {
+    void testExceptionByStringValue() throws Exception {
         try {
-            script.exception()
+            script.exception("message")
         } catch (ex) {
             throw ex
         } finally {

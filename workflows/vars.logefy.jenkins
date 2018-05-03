@@ -11,34 +11,34 @@ def getScript() {
     return script
 }
 
-def info() {
+def info(value) {
    node() {
-       getScript().info 'message'
+       getScript().info value
    }
 }
 
-def warning() {
+def warning(value) {
    node() {
-       getScript().warning 'message'
+       getScript().warning value
    }
 }
 
-def debug() {
+def debug(value) {
    node() {
-       getScript().debug 'message'
+       getScript().debug value
    }
 }
 
-def error() {
+def error(value) {
     node() {
-        getScript().error 'message'
+        getScript().error value
     }
 }
 
-def exception() {
+def exception(value) {
     node() {
         println "TBD: To be tested."
-        //getScript().exception 'message'
+        //getScript().exception value
     }
 }
 

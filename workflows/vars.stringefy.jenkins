@@ -1,0 +1,32 @@
+#!/usr/bin/env groovy
+import groovy.transform.Field
+import java.lang.Exception
+
+@Field def script
+
+def getScript() {
+    if(script == null) {
+        script = load 'vars/stringefy.groovy'
+    }
+    return script
+}
+
+def isEmpty(value) {
+   node() {
+       getScript().isEmpty value
+   }
+}
+
+def isNotEmpty(value) {
+   node() {
+       getScript().isNotEmpty value
+   }
+}
+
+def isInteger(value) {
+   node() {
+       return getScript().isInteger(value)
+   }
+}
+
+return this
