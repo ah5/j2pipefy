@@ -23,3 +23,5 @@ def isEmpty(str) {
 def isNotEmpty(str) {
     return ((str?.trim())? true: false)
 }
+
+return this
