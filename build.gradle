@@ -1,7 +1,6 @@
 plugins {
     id 'base'
     id 'groovy'
-    id 'java'
     id 'war'
     id 'jacoco'
 }
@@ -57,6 +56,22 @@ clean.doFirst {
 compileGroovy.dependsOn clean
 compileGroovy.options.compilerArgs += ['-proc:none']
 compileTestGroovy.options.compilerArgs += ['-proc:none']
+
+test {
+    testLogging {
+        //TBD: Add below test events based on debug conditions in properties
+        //  "standardError", "standardOut"
+        events "passed", "skipped", "failed"
+        exceptionFormat = 'full'
+        showExceptions true
+        showCauses true
+        afterSuite { desc, result ->
+            if (!desc.parent) {
+                logger.lifecycle "\nResults: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
+            }
+        }
+    }
+}
 
 groovydoc {
     dependsOn compileGroovy

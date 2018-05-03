@@ -1,0 +1,45 @@
+#!/usr/bin/env groovy
+import groovy.transform.Field
+import java.lang.Exception
+
+@Field def script
+
+def getScript() {
+    if(script == null) {
+        script = load 'vars/logefy.groovy'
+    }
+    return script
+}
+
+def info() {
+   node() {
+       getScript().info 'message'
+   }
+}
+
+def warning() {
+   node() {
+       getScript().warning 'message'
+   }
+}
+
+def debug() {
+   node() {
+       getScript().debug 'message'
+   }
+}
+
+def error() {
+    node() {
+        getScript().error 'message'
+    }
+}
+
+def exception() {
+    node() {
+        println "TBD: To be tested."
+        //getScript().exception 'message'
+    }
+}
+
+return this
