@@ -21,7 +21,7 @@ class TestLogefy extends BasePipefyTest {
         try {
             script.info("message")
         } catch (ex) {
-            System.out.println(ex.getMessage())
+            System.out.println("error calling info.")
         } finally {
             printCallStack()
         }
