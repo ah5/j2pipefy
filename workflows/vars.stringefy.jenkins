@@ -11,15 +11,21 @@ def getScript() {
     return script
 }
 
-def isEmpty() {
+def isEmpty(value) {
    node() {
-       getScript().isEmpty("")
+       getScript().isEmpty value
    }
 }
 
-def isNotEmpty() {
+def isNotEmpty(value) {
    node() {
-       getScript().isNotEmpty "message"
+       getScript().isNotEmpty value
+   }
+}
+
+def isInteger(value) {
+   node() {
+       return getScript().isInteger(value)
    }
 }
 

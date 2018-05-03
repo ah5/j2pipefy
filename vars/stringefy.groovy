@@ -24,4 +24,23 @@ def isNotEmpty(str) {
     return ((str?.trim())? true: false)
 }
 
+/**
+ * @description checks if string is integer
+ * @syntax stringefy.isInteger <str>
+ * @usage stringefy.isInteger "str"
+ * 
+ * @param str the string to be verified
+ * @return true if it is an integer
+ */
+def isInteger(str) {
+    try {
+        int value = str as Integer
+        isInt = true
+    } catch (Exception ex) {
+        error "stringefy.isInteger: " + ex.getMessage()
+        isInt = false
+    }
+    return isInt
+}
+
 return this

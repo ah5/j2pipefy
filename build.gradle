@@ -59,12 +59,14 @@ compileTestGroovy.options.compilerArgs += ['-proc:none']
 
 test {
     testLogging {
-        //TBD: Add below test events based on debug conditions in properties
-        //  "standardError", "standardOut"
-        events "passed", "skipped", "failed"
-        exceptionFormat = 'full'
+        events "skipped", "failed"
+        exceptionFormat "short"
         showExceptions true
         showCauses true
+        if(project.hasProperty('test_debug') && (project.getProperty('test_debug') == "true")) {
+            events "passed", "skipped", "failed", "standardError", "standardOut"
+            exceptionFormat "full"
+        }
         afterSuite { desc, result ->
             if (!desc.parent) {
                 logger.lifecycle "\nResults: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
