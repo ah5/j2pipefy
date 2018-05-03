@@ -18,65 +18,35 @@ class TestLogefy extends BasePipefyTest {
 
     @Test
     void testInfoByStringValue() throws Exception {
-        try {
-            script.info("message")
-        } catch (ex) {
-            System.out.println("error calling info.")
-        } finally {
-            printCallStack()
-        }
+        script.info("message")
     }
 
     //warning ------------------------------------------
 
     @Test
     void testWarningByStringValue() throws Exception {
-        try {
-            script.warning("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.warning("message")
     }
 
     //debug ------------------------------------------
 
     @Test
     void testDebugByStringValue() throws Exception {
-        try {
-            script.debug("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.debug("message")
     }
 
     //error ------------------------------------------
 
     @Test
     void testErrorByStringValue() throws Exception {
-        try {
-            script.error("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.error("message")
     }
 
     //exception ------------------------------------------
 
     @Test
     void testExceptionByStringValue() throws Exception {
-        try {
-            script.exception("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.exception("message")
     }
 
 }
