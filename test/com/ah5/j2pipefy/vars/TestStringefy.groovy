@@ -18,105 +18,51 @@ class TestStringefy extends BasePipefyTest {
 
     @Test
     void testIsEmptyByStringValue() throws Exception {
-        try {
-            script.isEmpty("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isEmpty("message")
     }
 
     @Test
     void testIsEmptyByNullValue() throws Exception {
-        try {
-            script.isEmpty(null)
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isEmpty(null)
     }
 
     @Test
     void testIsEmptyByEmptyValue() throws Exception {
-        try {
-            script.isEmpty("")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isEmpty("")
     }
 
     //isNotEmpty ------------------------------------------
 
     @Test
     void testIsNotEmptyByStringValue() throws Exception {
-        try {
-            script.isNotEmpty("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isNotEmpty("message")
     }
 
     @Test
     void testIsNotEmptyByNullValue() throws Exception {
-        try {
-            script.isNotEmpty(null)
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isNotEmpty(null)
     }
 
     @Test
     void testIsNotEmptyByEmptyValue() throws Exception {
-        try {
-            script.isNotEmpty("")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isNotEmpty("")
     }
 
     //isInteger ------------------------------------------
 
     @Test
     void testIsIntegerByStringValue() throws Exception {
-        try {
-            script.isInteger("message")
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isInteger("message")
     }
 
     @Test
     void testIsIntegerByNullValue() throws Exception {
-        try {
-            script.isInteger(null)
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isInteger(null)
     }
 
     @Test
     void testIsIntegerByIntegerValue() throws Exception {
-        try {
-            script.isInteger(new Integer(1))
-        } catch (ex) {
-            System.out.println(ex.getMessage())
-        } finally {
-            printCallStack()
-        }
+        script.isInteger(new Integer(1))
     }
 
 }
