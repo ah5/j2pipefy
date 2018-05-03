@@ -12,8 +12,7 @@ cache:
     - $HOME/.gradle/wrapper/
 
 script:
-  - ./gradlew clean assemble check
-  - ./gradlew codacyCoverageUpload
+  - ./gradlew clean assemble check test codacyCoverageUpload
 
 after_failure:
   - ./gradlew clean check --debug
