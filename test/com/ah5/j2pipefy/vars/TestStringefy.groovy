@@ -21,7 +21,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isEmpty("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -32,7 +32,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isEmpty(null)
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -43,7 +43,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isEmpty("")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -56,7 +56,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isNotEmpty("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -67,7 +67,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isNotEmpty(null)
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -78,7 +78,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isNotEmpty("")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -91,7 +91,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isInteger("message")
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -102,7 +102,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isInteger(null)
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
@@ -113,7 +113,7 @@ class TestStringefy extends BasePipefyTest {
         try {
             script.isInteger(new Integer(1))
         } catch (ex) {
-            throw ex
+            System.out.println(ex.getMessage())
         } finally {
             printCallStack()
         }
