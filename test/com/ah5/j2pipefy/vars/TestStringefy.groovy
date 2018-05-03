@@ -5,7 +5,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.Assert
 
-class TestLogefy extends BasePipefyTest {
+class TestStringefy extends BasePipefyTest {
 
     @Override
     @Before
