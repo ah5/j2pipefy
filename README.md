@@ -1,11 +1,5 @@
 # j2pipefy - Pipe your workflow using Jenkins 2+ !
 
-<p align="right">
-  <a href="#">
-      <img src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=ah5f&repo=j2pipefy&countColor=%237B1E7A" />
-   </a>
-</p>
-
 | Branch            | Version   | Continuous Integration |
 | :------------     | :-----:   | -------------:    |
 | `master`          | `1.0.0`   | [![Build Status](https://travis-ci.org/ah5/j2pipefy.svg?branch=master)](https://travis-ci.org/ah5/j2pipefy) [![codecov](https://codecov.io/gh/ah5/j2pipefy/branch/master/graph/badge.svg?branch=master)](https://codecov.io/gh/ah5/j2pipefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/48e7db2939074833ab02bafcf9830bfd?branch=master)](https://www.codacy.com/app/ah5/j2pipefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ah5/j2pipefy&amp;utm_campaign=Badge_Grade) |
